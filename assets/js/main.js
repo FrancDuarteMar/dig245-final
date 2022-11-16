@@ -1,23 +1,23 @@
-async function getPreData() {
+// async function getPreData() {
 
-    var tempVar;
+//     var tempVar;
     
-    var requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-      };
+//     var requestOptions = {
+//         method: 'GET',
+//         redirect: 'follow'
+//       };
       
-    //   await fetch("https://datasets-server.huggingface.co/first-rows?dataset=laion%2Flaion2B-en&config=laion--laion2B-en&split=train")
-        await fetch("https://datasets-server.huggingface.co/first-rows?dataset=ChristophSchuhmann%2Fimproved_aesthetics_6.5plus&config=ChristophSchuhmann--improved_aesthetics_6.5plus&split=train")
-        .then(response => {
-            return response.json();
-            })
-        .then(data => {
-            tempVar = data;
-        })
-        .catch(error => console.log('error', error));
-        return tempVar;
-}
+//     //   await fetch("https://datasets-server.huggingface.co/first-rows?dataset=laion%2Flaion2B-en&config=laion--laion2B-en&split=train")
+//         await fetch("https://datasets-server.huggingface.co/first-rows?dataset=ChristophSchuhmann%2Fimproved_aesthetics_6.5plus&config=ChristophSchuhmann--improved_aesthetics_6.5plus&split=train")
+//         .then(response => {
+//             return response.json();
+//             })
+//         .then(data => {
+//             tempVar = data;
+//         })
+//         .catch(error => console.log('error', error));
+//         return tempVar;
+// }
 
 
 var correctAnswer;
@@ -47,17 +47,20 @@ function findValidImg(dataset){
 async function loadNewSet(){
     $(".preMadeImg").ready(async function (){
 
-        let respon = await getPreData();
-        console.log("DONE")
-        console.log(Object.keys(respon))
-        console.log(respon['rows'])
-        $(".test").attr("src",findValidImg(respon['rows']))
+        // let respon = await getPreData();
+        // console.log("DONE")
+        // console.log(Object.keys(respon))
+        // console.log(respon['rows'])
+        // $(".test").attr("src",findValidImg(respon['rows']))
+        $(".test").attr("src",'./assets/img/laion/'+Math.floor(1+ Math.random() * 82)+'.jpg')
+
+
 
         // $(".test").attr("src",'./assets/img/abst/'+Math.floor(1+ Math.random() * 22)+'.jpg')
-        console.log(location)
+        // console.log(location)
 
         
-        console.log(findValidImg(respon['rows']))
+        // console.log(findValidImg(respon['rows']))
 
 
         

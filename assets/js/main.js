@@ -1,4 +1,4 @@
-async function getData() {
+async function getPreData() {
 
     var tempVar;
     
@@ -19,51 +19,137 @@ async function getData() {
 }
 
 
-// $(document).ready(function () {
-// resp = await getData()
+var correctAnswer;
 
-// console.log(resp)
-
-// }
-
+async function getFile(){
+    return `<img src= "${"./assets/img/abst/"+Math.floor(Math.random() * 22)+".jpg"}"width="300" height="300">`
+    
+}
 
 
 function findValidImg(dataset){
     var keys = Object.keys(dataset);
     var randomProperty = dataset[keys[ keys.length * Math.random() << 0]]
-    console.log("random")
-    console.log(randomProperty['row']['URL'])
+    // console.log("random")
+    // console.log(randomProperty['row']['URL'])
     // if(randomProperty["row"])
     
     // };
-    console.log(randomProperty)
+    // console.log(randomProperty)
     return randomProperty['row']['URL']
 
     
 }
 
-$(document).ready(function () {
-    $(".genImg").ready(async function (){
-        let respon = await getData();
+
+
+async function loadNewSet(){
+    $(".preMadeImg").ready(async function (){
+
+        let respon = await getPreData();
         console.log("DONE")
         console.log(Object.keys(respon))
         console.log(respon['rows'])
-        respon['rows'].forEach(element => {
-            // console.log(element['row']["URL"])
-            $(".genImg").html(`
-            <img src="${findValidImg(respon['rows'])}"><br>`
-            )
-        });
-        
+        // $(".preMadeImg").html(`
+            // <img src="${findValidImg(respon['rows'])}" width="300" height="300">`
+            // )
+        // location = "./assets/img/abst/"+Math.floor(1+Math.random() * 22)+".jpg"
+        // let gile = await getFile()
+
+        // $(".preMadeImg").html(gile)
+        // $(".test").load('./assets/img/abst/'+Math.floor(Math.random() * 22)+'.jpg');
+        $(".test").attr("src",'./assets/img/abst/'+Math.floor(1+ Math.random() * 22)+'.jpg')
+        console.log(location)
+
         
         console.log(findValidImg(respon['rows']))
 
-    }
+
+        
+
+        }
     )
+
+}
+
+$(document).ready(function () {
+    if(Math.floor(Math.random() * 101) > 50) {
+        $('#top').hide();
+        correctAnswer = "bottom";
+    }
+    else{
+        $('#bottom').hide();
+        correctAnswer = "top";
+    }  
+    loadNewSet();
+        // location = "./assets/img/abst/"+Math.floor(Math.random() * 22)+".jpg"
+
+       
+
+    jQuery(':button').click(function () {
+        $(':button').prop('disabled', true);
+        if (this.id == 'genOpt1') {
+            if(correctAnswer = "top"){
+                $(this).css("border","10px solid red");      
+            }
+            else{
+                $(this).css("border","10px solid red");    
+            }
+        }
+        else if (this.id == 'genOpt2') {
+            if(correctAnswer = "bottom"){
+                $(this).css("border","10px solid red");      
+            }
+            else{
+                $(this).css("border","10px solid red");    
+            }
+        }
+
+        else if (this.id == 'realOpt1') {
+            if(correctAnswer = "top"){
+                $(this).css("border","10px solid green");      
+            }
+            else{
+                $(this).css("border","10px solid red");    
+            }
+        }
+        else if (this.id == 'realOpt2') {
+            if(correctAnswer = "bottom"){
+                $(this).css("border","10px solid green");      
+            }
+            else{
+                $(this).css("border","10px solid red");    
+            }
+        }
+        else if(this.id == "continue"){
+            location.reload();
+
+
+        }
+
+        $('#continue').prop('disabled', false);
+
 });
 
+
     
-// $(document).ready(function () {
+    // $('#genOpt1, #genOpt2', '#realOpt1','#realOpt2').click(function () {
+    //     if (this.id == 'submit1') {
+    //        alert('Submit 1 clicked');
+    //     }
+    //     else if (this.id == 'submit2') {
+    //        alert('Submit 2 clicked');
+    //     }
+    //  });
+
+    
+});
+
+
+
+
+
+
 
 // 	$("button").click(async function () {
 // 		// await response

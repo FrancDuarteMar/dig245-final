@@ -7,7 +7,8 @@ async function getPreData() {
         redirect: 'follow'
       };
       
-      await fetch("https://datasets-server.huggingface.co/first-rows?dataset=laion%2Flaion2B-en&config=laion--laion2B-en&split=train")
+    //   await fetch("https://datasets-server.huggingface.co/first-rows?dataset=laion%2Flaion2B-en&config=laion--laion2B-en&split=train")
+        await fetch("https://datasets-server.huggingface.co/first-rows?dataset=ChristophSchuhmann%2Fimproved_aesthetics_6.5plus&config=ChristophSchuhmann--improved_aesthetics_6.5plus&split=train")
         .then(response => {
             return response.json();
             })
@@ -50,15 +51,9 @@ async function loadNewSet(){
         console.log("DONE")
         console.log(Object.keys(respon))
         console.log(respon['rows'])
-        // $(".preMadeImg").html(`
-            // <img src="${findValidImg(respon['rows'])}" width="300" height="300">`
-            // )
-        // location = "./assets/img/abst/"+Math.floor(1+Math.random() * 22)+".jpg"
-        // let gile = await getFile()
+        $(".test").attr("src",findValidImg(respon['rows']))
 
-        // $(".preMadeImg").html(gile)
-        // $(".test").load('./assets/img/abst/'+Math.floor(Math.random() * 22)+'.jpg');
-        $(".test").attr("src",'./assets/img/abst/'+Math.floor(1+ Math.random() * 22)+'.jpg')
+        // $(".test").attr("src",'./assets/img/abst/'+Math.floor(1+ Math.random() * 22)+'.jpg')
         console.log(location)
 
         

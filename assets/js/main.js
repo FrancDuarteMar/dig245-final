@@ -74,7 +74,7 @@ $(document).ready(function () {
     let getFile = Math.floor(1+ Math.random() * 82)
 
     let difficulty = Math.floor(1+ Math.random() * 101)
-        console.log("Difficulty: "+difficulty)
+        // console.log("Difficulty: "+difficulty)
         if(difficulty <= 16){
             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
             $(".genImg").attr("src",'./assets/img/stable-5/'+getFile +'.jpg')

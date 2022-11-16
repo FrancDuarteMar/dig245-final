@@ -22,55 +22,98 @@
 
 var correctAnswer;
 
-async function getFile(){
-    return `<img src= "${"./assets/img/abst/"+Math.floor(Math.random() * 22)+".jpg"}"width="300" height="300">`
+// async function getAbstFile(){
+//     return `<img src= "${"./assets/img/abst/"+Math.floor(Math.random() * 22)+".jpg"}"width="300" height="300">`
     
-}
+// }
 
 
-function findValidImg(dataset){
-    var keys = Object.keys(dataset);
-    var randomProperty = dataset[keys[ keys.length * Math.random() << 0]]
-    // console.log("random")
-    // console.log(randomProperty['row']['URL'])
-    // if(randomProperty["row"])
+// function findValidImg(dataset){
+//     var keys = Object.keys(dataset);
+//     var randomProperty = dataset[keys[ keys.length * Math.random() << 0]]
+//     // console.log("random")
+//     // console.log(randomProperty['row']['URL'])
+//     // if(randomProperty["row"])
     
-    // };
-    // console.log(randomProperty)
-    return randomProperty['row']['URL']
+//     // };
+//     // console.log(randomProperty)
+//     return randomProperty['row']['URL']
 
     
-}
+// }
 
 
 
-async function loadNewSet(){
-    $(".preMadeImg").ready(async function (){
+// async function loadNewSet(){
+//     $(".preMadeImg").ready(async function (){
 
-        // let respon = await getPreData();
-        // console.log("DONE")
-        // console.log(Object.keys(respon))
-        // console.log(respon['rows'])
-        // $(".test").attr("src",findValidImg(respon['rows']))
-        $(".test").attr("src",'./assets/img/laion/'+Math.floor(1+ Math.random() * 82)+'.jpg')
+//         // let respon = await getPreData();
+//         // console.log("DONE")
+//         // console.log(Object.keys(respon))
+//         // console.log(respon['rows'])
+//         // $(".test").attr("src",findValidImg(respon['rows']))
+//         $(".test").attr("src",'./assets/img/laion/'+Math.floor(1+ Math.random() * 82)+'.jpg')
 
 
 
-        // $(".test").attr("src",'./assets/img/abst/'+Math.floor(1+ Math.random() * 22)+'.jpg')
-        // console.log(location)
+//         // $(".test").attr("src",'./assets/img/abst/'+Math.floor(1+ Math.random() * 22)+'.jpg')
+//         // console.log(location)
 
         
-        // console.log(findValidImg(respon['rows']))
+//         // console.log(findValidImg(respon['rows']))
+//         }
+//     )
 
+// }
 
-        
-
-        }
-    )
-
-}
+// $(document).on('click', 'input[type="checkbox"]', function() {      
+//     $('input[type="checkbox"]').not(this).prop('checked', false);      
+// });
 
 $(document).ready(function () {
+    let getFile = Math.floor(1+ Math.random() * 82)
+
+    let difficulty = Math.floor(1+ Math.random() * 101)
+        console.log("Difficulty: "+difficulty)
+        if(difficulty <= 16){
+            $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+            $(".genImg").attr("src",'./assets/img/stable-5/'+getFile +'.jpg')
+            $("#diffLevel").html("Current difficulty: 1")
+        }
+        else if(16 < difficulty && difficulty<= 32){
+            $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+            $(".genImg").attr("src",'./assets/img/stable-25/'+getFile +'.jpg')
+            $("#diffLevel").html("Current difficulty: 2")
+        }
+                    
+        else if(32 < difficulty && difficulty <= 48){
+            $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+            $(".genImg").attr("src",'./assets/img/stable-50/'+getFile +'.jpg')
+            $("#diffLevel").html("Current difficulty: 3")
+
+                }    
+        else if(48 < difficulty && difficulty <= 64){
+     
+            $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+            $(".genImg").attr("src",'./assets/img/stable-100/'+getFile +'.jpg')
+            $("#diffLevel").html("Current difficulty: 4")
+
+        }
+        else if(64 < difficulty && difficulty <= 80){
+            $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+            $(".genImg").attr("src",'./assets/img/stable-500/'+getFile +'.jpg')
+            $("#diffLevel").html("Current difficulty: 5")
+
+            }
+        else{
+     
+            $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+            $(".genImg").attr("src",'./assets/img/stable-1000/'+getFile +'.jpg')
+            $("#diffLevel").html("Current difficulty: 6")
+
+            }
+        
+            
     if(Math.floor(Math.random() * 101) > 50) {
         $('#top').hide();
         correctAnswer = "bottom";
@@ -79,8 +122,98 @@ $(document).ready(function () {
         $('#bottom').hide();
         correctAnswer = "top";
     }  
-    loadNewSet();
-        // location = "./assets/img/abst/"+Math.floor(Math.random() * 22)+".jpg"
+
+    // $('#isAgeSelected').click(function() {
+    //     $(".test").attr("src",'./assets/img/abst/'+Math.floor(Math.random() * 22)+'.jpg')
+    // });
+    
+    
+
+
+
+    // if(document.getElementById(abstImg).checked){
+    //     // getAbstFile
+        // ${"./assets/img/abst/"+Math.floor(Math.random() * 22)
+        // $(".test").attr("src",'./assets/img/abst/'+Math.floor(Math.random() * 22)+'.jpg')
+    // }
+    // else{
+        // let getFile = Math.floor(1+ Math.random() * 82)
+        // $(".test").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+
+    // }
+
+    
+    // loadNewSet();
+
+    // $('#difficulty').on('change', function () {
+    //     let getFile = Math.floor(1+ Math.random() * 82)
+    //     switch ($('#difficulty :selected').val()) {
+    //         case "1":
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-5/'+getFile +'.jpg')
+    //             break;
+    //         case "2": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-25/'+getFile +'.jpg')
+    //             break
+    //         case "3": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-50/'+getFile +'.jpg')
+    //             break
+    //         case "4": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-100/'+getFile +'.jpg')
+    //             break
+    //         case "5": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-500/'+getFile +'.jpg')
+    //             break
+    //         case "6": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-1000/'+getFile +'.jpg')
+    //             break
+    //     }
+
+        
+    // });
+
+    
+    // $('#submit').click(function(){ 
+    //     let getFile = Math.floor(1+ Math.random() * 82)
+
+    //     switch ($('#difficulty :selected').val()) {
+    //         case "1":
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-5/'+getFile +'.jpg')
+    //             break;
+    //         case "2": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-25/'+getFile +'.jpg')
+    //             break
+    //         case "3": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-50/'+getFile +'.jpg')
+    //             break
+    //         case "4": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-100/'+getFile +'.jpg')
+    //             break
+    //         case "5": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-500/'+getFile +'.jpg')
+    //             break
+    //         case "6": 
+    //             $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //             $(".genImg").attr("src",'./assets/img/stable-100/'+getFile +'.jpg')
+    //             break
+    //         // default:
+    //         //     $(".humImg").attr("src",'./assets/img/laion/'+getFile +'.jpg')
+    //         //     $(".genImg").attr("src",'./assets/img/stable-25/'+getFile +'.jpg')
+    //         //     break;
+    //     }
+        
+
+    // });
 
        
 
@@ -127,7 +260,9 @@ $(document).ready(function () {
 
         $('#continue').prop('disabled', false);
 
-});
+        
+
+    });
 
 
     

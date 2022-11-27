@@ -1,2 +1,21 @@
 
 /* css */
+.genBttn,.humBttn{
+    /* width: 512px; */
+    /* height: 512px; */
+    object-fit: cover;
+}
+
+.humImg,.genImg{
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+}
+
+
+
+button{
+    all: unset;
+    cursor: pointer;
+
+}

@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	
+
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link rel="" href="./assets/js/img-info.json">
 
     <title>dig245-final</title>
 </head>
@@ -13,7 +17,7 @@
 
     <h1>dig245-final</h1>
 	<div class="container">
-		<div class="row"><h2>Select the human created image</h2><hr></div>
+		<div class="row"><h2>Select the image created by a human</h2><hr></div>
 		<!-- <div class="row">
 			<div class="col"><input type="checkbox" name="Abstract" id="abstImg">Abstract Art Only</div>
 			<div class="col"><input type="checkbox" name="Stable Diffusion Images" id="stabImg">Stable Diffusion</div>
@@ -38,13 +42,12 @@
 
 		<div class="row" id="top">
 			<div class="col">
-				<button class="genImg" id="genOpt1"><img  src="" alt="" class = "genImg" width="400" height="400"></button>
+				<button class="genBttn" id="genOpt1"><img  src="" alt="" class = "genImg"></button>
 
-				<!-- <button class="genImg" id="genOpt1"><img src="https://thisartworkdoesnotexist.com/" alt="" width="300" height="300"></button> -->
 			</div>
 
 			<div class="col">
-				<button class="preMadeImg" id="realOpt1"><img src="" alt="" class="humImg" width="400" height = "400"></button>
+				<button class="humBttn" id="realOpt1"><img src="" alt="" class="humImg" ></button>
 			</div>
 
 
@@ -52,13 +55,13 @@
 		</div>
 		<div class="row" id="bottom">
 			<div class="col">
-				<button class="preMadeImg" id ="realOpt2"><img src="" alt="" class="humImg" width="400" height = "400"></button>
+				<button class="humBttn" id ="realOpt2"><img src="" alt="" class="humImg"></button>
 
 			</div>
 			
 			<div class="col">
-				<button class="genImg" id="genOpt2"><img src="" alt="" class = "genImg" width="400" height="400"></button>
-				<!-- <button class="genImg" id="genOpt2"><img src="https://thisartworkdoesnotexist.com/" alt="" width="300" height="300"></button> -->
+				<button class="genBttn" id="genOpt2"><img src="" alt="" class ="genImg"></button>
+				
 			</div>
 
 		</div>

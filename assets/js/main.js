@@ -9,16 +9,19 @@ function getNewData(fileToLookAt){
         if(Math.floor(Math.random() * 101) > 50) {
             $('#top').hide();
             $('#bottom').show();
+            $('#promptSection').hide();
             correctAnswer = "bottom";
         }
         else{
             $('#bottom').hide();
             $('#top').show();
+            $('#promptSection').hide();
             correctAnswer = "top";
         }  
         
         let getFile = fileToLookAt["image"]
         let imgPrompt = fileToLookAt['prompt']
+        $("#prompt").html(`"${imgPrompt}"`)
         
         let difficulty = Math.floor(1+ Math.random() * 64)
             if(difficulty <= 16){
@@ -64,8 +67,11 @@ function getNewData(fileToLookAt){
     
         // jQuery(':button').click(function () {
         jQuery(':button').one('click',function(){
+            $('#promptSection').show();
+
             $(':button').prop('disabled', true);
             if (this.id == 'genOpt1') {
+                
                 if(correctAnswer = "top"){
                     $(this).css("border","10px solid red");      
                 }

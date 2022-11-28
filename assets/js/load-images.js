@@ -22,6 +22,11 @@ function initialize(jsonData){
             $('<hr>').appendTo("#images")
         }
 
+        window.addEventListener('load', function () {
+            Lightense('img:not(.no-lightense),.lightense');
+          }, false);
+          
+
        
 
 

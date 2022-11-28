@@ -23,7 +23,7 @@ function getNewData(fileToLookAt){
         let imgPrompt = fileToLookAt['prompt']
         $("#prompt").html(`"${imgPrompt}"`)
         
-        let difficulty = Math.floor(1+ Math.random() * 64)
+        let difficulty = Math.floor(1+ Math.random() * 101)
             if(difficulty <= 16){
                 $(".humImg").attr("src",'./assets/img/laion/'+getFile)
                 $(".genImg").attr("src",'./assets/img/stable-5/'+getFile)

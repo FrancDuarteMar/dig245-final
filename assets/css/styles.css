@@ -1,8 +1,6 @@
 
 /* css */
 .genBttn,.humBttn{
-    /* width: 512px; */
-    /* height: 512px; */
     object-fit: cover;
 }
 
@@ -18,4 +16,17 @@ button{
     all: unset;
     cursor: pointer;
 
+}
+hr{
+    background-color: black;    
+    height: 2px;
+    opacity: 1;
+}
+
+#main-content{
+    border-radius: 5px;
+    background-color: peachpuff;
+    /* height: view; */
+    height: max-content;
+    /* height: 93.7vh; */
 }

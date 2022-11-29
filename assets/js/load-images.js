@@ -20,12 +20,11 @@ function initialize(jsonData){
             $('<img/>').attr('src','./assets/img/stable-1000/'+jsonData[key]["image"]).addClass("image-elem").appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
 
             $('<hr>').appendTo("#images")
+            Lightense('img:not(.no-lightense),.lightense');
+
         }
 
-        window.addEventListener('load', function () {
-            Lightense('img:not(.no-lightense),.lightense');
-          }, false);
-          
+
 
        
 

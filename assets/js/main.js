@@ -148,10 +148,9 @@ function initialize(jsonData){
 
     allFiles=jsonData
     getRandFile(allFiles)
-});
+});}
 
 
-}
 
 fetch('./assets/js/img-info.json')
     .then(data => data.json())

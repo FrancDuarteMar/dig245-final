@@ -28,6 +28,7 @@
 		<h1>dig245-final</h1>
 
 	</div>
+    <div class="container" id="parchment"></div>
 
 	<div class="container" id="main-content">
 
@@ -53,7 +54,13 @@
 	<script src="./assets/js/load-images.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/sparanoid/lightense-images@master/dist/lightense.min.js"></script>
 
-
+	<!-- <script src="./assets/js/parchment.js"></script> -->
+	<svg>
+		<filter id="wavy2">
+		  <feTurbulence x="0" y="0" baseFrequency="0.03" numOctaves="5" seed="43" />
+		  <feDisplacementMap in="SourceGraphic" scale="20" />
+		</filter>
+	  </svg>
 
 </body>
 </html>

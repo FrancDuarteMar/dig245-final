@@ -27,10 +27,10 @@
 		<h1>dig245-final</h1>
 
 	</div>
-
+<div class="container-fluid">
 	<div class="container" id="main-content">
 
-	<div class="row" id="header"></div>
+	<div class=" container row" id="header"></div>
 	<!-- <div id="header"></div> -->
 
 
@@ -56,24 +56,33 @@
             </ul>
 		</div> -->
 		
-		<div class="row"><h2>Select the image created by a human</h2><hr></div>
+		<div class="row">
+			<div class="twelve columns">
+				<h2>Select the image created by a human</h2>
+				<hr>
+			</div>
+			<!-- <div class="twelve columns">
+				<hr>
+			</div> -->
+			
+		</div>
 		<!-- <div class="row">
 			<div class="col"><input type="checkbox" name="Abstract" id="abstImg">Abstract Art Only</div>
 			<div class="col"><input type="checkbox" name="Stable Diffusion Images" id="stabImg">Stable Diffusion</div>
 		</div> -->
 		<div class="row">
-			<div class="col"><h5 id="diffLevel">Current difficulty: </h5></div>
-			<div class="col-1"><button id="continue">Continue</button></div>
+			<div class="col-10 ten columns"><h5 id="diffLevel">Current difficulty: </h5></div>
+			<div class="col-2 two columns"><button id="continue">Continue</button></div>
 			
 		</div>
 		<br>
 		<div class="row" id="top">
-			<div class="col">
+			<div class="five columns img-col col-lg-5 .col-12 .col-md-4">
 				<button class="genBttn" id="genOpt1"><img  src="./assets/img/question.jpg" alt="" class = "genImg"></button>
 
 			</div>
-
-			<div class="col">
+			<div class="two columns col-lg-1 col-md-3"></div>
+			<div class="five columns img-col col-lg-5.col-12 .col-md-4">
 				<button class="humBttn" id="realOpt1"><img src="./assets/img/question.jpg" alt="" class="humImg" ></button>
 			</div>
 
@@ -81,12 +90,12 @@
 
 		</div>
 		<div class="row" id="bottom">
-			<div class="col">
+			<div class="five columns img-col col-lg-5 .col-12 .col-md-4">
 				<button class="humBttn" id ="realOpt2"><img src="./assets/img/question.jpg" alt="" class="humImg"></button>
 
 			</div>
-			
-			<div class="col">
+			<div class="two columns col-lg-1"></div>
+			<div class="five columns img-col col-lg-5 .col-12 .col-md-4">
 				<button class="genBttn" id="genOpt2"><img src="./assets/img/question.jpg" alt="" class ="genImg"></button>
 				
 			</div>
@@ -100,7 +109,7 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 	<!-- <div class="genImg"> -->
 		<!-- <button class="preMadeImg"></button> -->
 
@@ -111,11 +120,11 @@
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<!-- Boostrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
 	<!-- Project JS -->
 	<script src="assets/js/main.js"></script>
-
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </body>
 </html>

@@ -62,8 +62,8 @@
 			<div class="col"><input type="checkbox" name="Stable Diffusion Images" id="stabImg">Stable Diffusion</div>
 		</div> -->
 		<div class="row">
-			<div class="col"><h5 id="diffLevel">Current difficulty: </h5></div>
-			<div class="col-1"><button id="continue">Continue</button></div>
+			<div class="col-10"><h5 id="diffLevel">Current difficulty: </h5></div>
+			<div class="col-2"><button class="btn-block" id="continue">Continue</button></div>
 			
 		</div>
 		<br>
@@ -106,7 +106,7 @@
 
 	<!-- </div> -->
 
-
+	
 
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -118,4 +118,10 @@
 
 
 </body>
+<svg>
+	<filter id="wavy2">
+	  <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+	  <feDisplacementMap in="SourceGraphic" scale="20" />
+	</filter>
+  </svg>
 </html>

@@ -6,8 +6,10 @@
 
 .humImg,.genImg{
     object-fit: cover;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* width: 500px; */
+    /* height: 500px; */
 }
 
 
@@ -15,6 +17,8 @@
 button{
     all: unset;
     cursor: pointer;
+    width: 100%;
+
 
 }
 hr{
@@ -31,3 +35,19 @@ hr{
     /* height: 93.7vh; */
 }
 
+
+
+
+.bs{
+    /* border: 3px red dashed; */
+    border: none;
+}
+
+/* .left-opt{
+    padding-right: 5%;
+
+}
+
+.right-opt{
+    padding-left: 5%;
+} */

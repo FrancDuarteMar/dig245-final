@@ -6,6 +6,8 @@ var running = true;
 function getNewData(fileToLookAt){
         $(':button').prop('disabled', false);
         $(':button').css("border","3px solid black");   
+        $(".right-opt").css("border","none")
+        $(".left-opt").css("border","none")
         if(Math.floor(Math.random() * 101) > 50) {
             $('#top').hide();
             $('#bottom').show();
@@ -70,6 +72,11 @@ function getNewData(fileToLookAt){
             $('#promptSection').show();
 
             $(':button').prop('disabled', true);
+
+            $(".right-opt").css("border","none")
+            $(".left-opt").css("border","none")
+
+            
             if (this.id == 'genOpt1') {
                 
                 if(correctAnswer = "top"){
@@ -112,8 +119,6 @@ function getNewData(fileToLookAt){
             }
 
             $('#continue').prop('disabled', false);
-
-            
 
         });
 

@@ -5,16 +5,28 @@ var running = true;
 
 function getNewData(fileToLookAt){
         $(':button').prop('disabled', false);
-        $(':button').css("border","3px solid black");   
-        $(".right-opt").css("border","none")
-        $(".left-opt").css("border","none")
+        // $(':button').css("border","3px solid black");   
+        $(".right-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
+        $(".left-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
+        
+        $("#continue").css("opacity","0")
+        $("#continue").css("cursor","default")
+        $("#continue").prop("disabled",true)
+
         if(Math.floor(Math.random() * 101) > 50) {
+            $("#continue").css("opacity","0")
+            $("#continue").css("cursor","default")
+            $("#continue").prop("disabled",true)
+            
             $('#top').hide();
             $('#bottom').show();
             $('#promptSection').hide();
             correctAnswer = "bottom";
         }
         else{
+            $("#continue").css("opacity","0")
+            $("#continue").css("cursor","default")
+            $("#continue").prop("disabled",true)
             $('#bottom').hide();
             $('#top').show();
             $('#promptSection').hide();
@@ -73,12 +85,15 @@ function getNewData(fileToLookAt){
 
             $(':button').prop('disabled', true);
 
-            $(".right-opt").css("border","none")
-            $(".left-opt").css("border","none")
+            // $(".right-opt").css("border","none")
+            // $(".left-opt").css("border","none")
 
-            
             if (this.id == 'genOpt1') {
-                
+                $("#continue").delay(10).animate({"opacity": "1"}, 700);
+                $("#continue").css("cursor","pointer")
+                $("#continue").prop("disabled",false)
+
+
                 if(correctAnswer = "top"){
                     $(this).css("border","10px solid red");      
                 }
@@ -87,6 +102,10 @@ function getNewData(fileToLookAt){
                 }
             }
             else if (this.id == 'genOpt2') {
+                $("#continue").delay(10).animate({"opacity": "1"}, 700);
+                $("#continue").css("cursor","pointer")
+                $("#continue").prop("disabled",false)
+
                 if(correctAnswer = "bottom"){
                     $(this).css("border","10px solid red");      
                 }
@@ -96,6 +115,10 @@ function getNewData(fileToLookAt){
             }
 
             else if (this.id == 'realOpt1') {
+                $("#continue").delay(10).animate({"opacity": "1"}, 700);
+                $("#continue").css("cursor","pointer")
+                $("#continue").prop("disabled",false)
+
                 if(correctAnswer = "top"){
                     $(this).css("border","10px solid green");      
                 }
@@ -104,6 +127,10 @@ function getNewData(fileToLookAt){
                 }
             }
             else if (this.id == 'realOpt2') {
+                $("#continue").delay(10).animate({"opacity": "1"}, 700);
+                $("#continue").css("cursor","pointer")
+                $("#continue").prop("disabled",false)
+
                 if(correctAnswer = "bottom"){
                     $(this).css("border","10px solid green");      
                 }
@@ -112,13 +139,17 @@ function getNewData(fileToLookAt){
                 }
             }
             else if(this.id == "continue"){
+                $("#continue").css("opacity","0")
+                $("#continue").css("cursor","default")
+                $("#continue").prop("disabled",true)
+                $("#continue").css("opacity","0")
+
                 // location.reload();
                 getRandFile(allFiles)
 
 
             }
 
-            $('#continue').prop('disabled', false);
 
         });
 
@@ -128,6 +159,11 @@ function getNewData(fileToLookAt){
 function getRandFile(files){
     console.log(Object.keys(files).length)
     
+    $("#continue").css("opacity","0")
+    $("#continue").css("cursor","default")
+    $("#continue").prop("disabled",true)
+    
+
     var randomFile = function (obj) {
         var keys = Object.keys(obj);
         var pos = keys[keys.length * Math.random() << 0]
@@ -150,7 +186,9 @@ function getRandFile(files){
 
 function initialize(jsonData){   
     $(document).ready(function () {
-
+    $("#continue").css("opacity","0")
+    $("#continue").css("cursor","default")
+    $("#continue").prop("disabled",true)
     allFiles=jsonData
     getRandFile(allFiles)
 });

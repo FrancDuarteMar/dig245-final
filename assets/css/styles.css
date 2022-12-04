@@ -1,16 +1,93 @@
 
-/* css */
+@media (min-width: 768px) {
 
+    #continue{
+        border-style: none;
+        text-decoration: underline;
+        font-size: 1.2rem ;
+        text-align: right;
+        padding-right: 0%;
+        font-weight: 200;
+        opacity: 0;
+    }
+
+    #diffLevel{
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+    .navbar-brand{
+        color:black;
+        font-weight: 800;
+        font-size: 1.5rem;
+    }
+
+    .nav-item{
+        color: black;
+        font-weight: 800;
+        font-size: 1.3rem;
+    }
+    
+    .instructions{
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+
+    .prompt{
+        font-weight: 200;
+        font-size: 0.7rem;
+        font-style: italic;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    
+    #continue{
+        border-style: none;
+        text-decoration: underline;
+        font-size: 1.5rem ;
+        text-align: right;
+        padding-right: 0%;
+        font-weight: 300;
+        opacity: 0;
+    }
+    #diffLevel{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    .navbar-brand{
+        color:black;
+        font-weight: 800;
+        font-size: 1.5rem;
+    }
+
+    .nav-item{
+        color: black;
+        font-weight: 800;
+        font-size: 1.3rem;
+    }
+    
+    .instructions{
+        font-size: 2rem;
+        font-weight: 400;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+
+ }
+
+ body{
+     background: rgba(240, 229, 229, 0.874);
+     font-family: 'Source Code Pro', monospace;
+     font-family: 'Space Mono', monospace;
+ }
 
 .genBttn,.humBttn{
     /* object-fit: cover; */
     border: 10px solid rgba(240, 229, 229, 0.874);
     aspect-ratio: 1/1;
-}
-body{
-    background: rgba(240, 229, 229, 0.874);
-    font-family: 'Source Code Pro', monospace;
-    font-family: 'Space Mono', monospace;
 }
 
 .humImg,.genImg{
@@ -19,60 +96,36 @@ body{
     aspect-ratio: 1/1;
 }
 
-
+#continue{
+    border-style: none;
+    text-decoration: underline;
+    text-align: right;
+    font-weight: 200;
+    opacity: 0;
+}
 
 button{
     all: unset;
     cursor: pointer;
     width: 100%;
-
 }
+
 hr{
     background-color: black;    
     height: 2px;
     opacity: 1;
-
 }
-
-#main-content{
-    /* border-radius: 5px; */
-    /* background-color: peachpuff; */
-    /* height: view; */
-    height: max-content;
-    /* height: 93.7vh; */
-}
-
-#continue{
-    border-style: none !important;
-    text-decoration: underline;
-    font-size: x-large ;
-    text-align: right;
-    padding-right: 0%;
-    font-weight: 200;
-    opacity: 0;
-
-}
-
 
 
 .bs{
     border: 3px red dashed;
-    border: none;
+    /* border: none; */
 }
 
-/* .left-opt{
-    padding-right: 5%;
-
-}
-
-.right-opt{
-    padding-left: 5%;
-} */
 
 .diff-cont-bar{
     margin-top: 0%;
     padding-top: 0%;
-
 }
 
 .noPad-bottom{
@@ -83,27 +136,14 @@ hr{
 
 .nav-item{
     color: black;
-    font-weight: 800;
-    font-size: large;
 }
 
 .active{
     text-decoration: underline;
 }
 
-.instructions{
-    font-size: 2rem;
-    font-weight: 400;
-    padding-bottom: 0%;
-    margin-bottom: 0%;
-}
 
 .noPad-left{
-    /* justify-content: left; */
     padding-left: 0%
 }
 
-#diffLevel{
-    font-size: 1.6rem;
-    font-weight: 300;
-}

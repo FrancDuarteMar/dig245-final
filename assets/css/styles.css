@@ -47,6 +47,9 @@
         padding-bottom: 2%
     }
 
+    #prompt,#promptSection{
+        font-size: .95rem;
+    }
 }
 
 
@@ -82,6 +85,18 @@
         font-weight: 400;
         padding-bottom: 0%;
         margin-bottom: 0%;
+    }
+
+    #top .humBttn{
+        margin-left: 2%
+    }
+
+    #bottom .genBttn{
+        margin-left: 2%
+    }
+
+    #prompt,#promptSection{
+        font-size: .85rem;
     }
 
  }
@@ -155,3 +170,53 @@ hr{
     padding-left: 0%
 }
 
+
+
+#continue{
+    border-style: none;
+    text-decoration: underline;
+    font-size: .9rem ;
+    text-align: right;
+    padding-right: 0%;
+    font-weight: 200;
+    opacity: 0;
+}
+
+#diffLevel{
+    font-size: .9rem;
+    font-weight: 200;
+}
+.navbar-brand{
+    color:black;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.nav-item{
+    color: black;
+    font-weight: 800;
+    font-size: .95rem;
+}
+
+.instructions{
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+.prompt{
+    font-weight: 200;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+#top .genBttn{
+    padding-bottom: 2%
+}
+#bottom .humBttn{
+    padding-bottom: 2%
+}    
+#prompt,#promptSection{
+    font-size: .65rem;
+}

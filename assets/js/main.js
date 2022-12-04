@@ -5,6 +5,7 @@ var running = true;
 
 function getNewData(fileToLookAt){
         $(':button').prop('disabled', false);
+        $(".navbar-toggler").prop('disabled',false);
         // $(':button').css("border","3px solid black");   
         $(".right-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
         $(".left-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
@@ -84,7 +85,7 @@ function getNewData(fileToLookAt){
             $('#promptSection').show();
 
             $(':button').prop('disabled', true);
-
+            $(".navbar-toggler").prop('disabled',false);
             // $(".right-opt").css("border","none")
             // $(".left-opt").css("border","none")
 
@@ -149,7 +150,7 @@ function getNewData(fileToLookAt){
 
 
             }
-
+            $(".navbar-toggler").prop('disabled',false);
 
         });
 

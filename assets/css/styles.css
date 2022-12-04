@@ -41,10 +41,10 @@
     }
     
     #top .genBttn{
-        padding-bottom: 2%
+        margin-bottom: 2%
     }
     #bottom .humBttn{
-        padding-bottom: 2%
+        margin-bottom: 2%
     }
 
     #prompt,#promptSection{
@@ -142,7 +142,7 @@ hr{
 
 .bs{
     border: 3px red dashed;
-    border: none;
+    /* border: none; */
 }
 
 
@@ -169,8 +169,6 @@ hr{
 .noPad-left{
     padding-left: 0%
 }
-
-
 
 #continue{
     border-style: none;
@@ -199,24 +197,20 @@ hr{
 }
 
 .instructions{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     padding-bottom: 0%;
     margin-bottom: 0%;
 }
 
-.prompt{
-    font-weight: 200;
-    font-size: 0.7rem;
-    font-style: italic;
-}
+
 
 #top .genBttn{
-    padding-bottom: 2%
+    margin-bottom: 0%
 }
 #bottom .humBttn{
-    padding-bottom: 2%
+    margin-bottom: 0.5%
 }    
 #prompt,#promptSection{
-    font-size: .65rem;
+    font-size: .85rem;
 }

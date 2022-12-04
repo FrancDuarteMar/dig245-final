@@ -8,7 +8,7 @@
         text-align: right;
         padding-right: 0%;
         font-weight: 200;
-        opacity: 0;
+        opacity: 1;
     }
 
     #diffLevel{
@@ -62,7 +62,7 @@
         text-align: right;
         padding-right: 0%;
         font-weight: 300;
-        opacity: 0;
+        opacity: 1;
     }
     #diffLevel{
         font-size: 1.5rem;
@@ -124,7 +124,7 @@
     text-decoration: underline;
     text-align: right;
     font-weight: 200;
-    opacity: 0;
+    opacity: 1;
 }
 
 button{
@@ -177,7 +177,7 @@ hr{
     text-align: right;
     padding-right: 0%;
     font-weight: 200;
-    opacity: 0;
+    opacity: 1;
 }
 
 #diffLevel{

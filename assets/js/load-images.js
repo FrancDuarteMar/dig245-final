@@ -1,5 +1,5 @@
 var currPageNum;
-const imagesToLoad = 3;
+var imagesToLoad = 3;
 var imageZoomBack = "rgba(0,0,0,0.05)"
 // var imageZoomBack = `lightblue url("./assets/img/question.jpg") no-repeat fixed center`
 // var imageZoomBack = ""
@@ -15,19 +15,19 @@ function loadMore(jsonData){
             $("<div></div>").addClass("row").addClass("imageLine").attr("id","image-"+key).appendTo("#images")
 
 
-            $('<img/>').attr('src','./assets/img/laion/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/laion/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-5/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-5/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-25/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-25/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-50/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-50/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-100/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-100/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-500/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-500/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
             
-            $('<img/>').attr('src','./assets/img/stable-1000/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-1000/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
             $('<hr>').appendTo("#images")
             
@@ -37,6 +37,18 @@ function loadMore(jsonData){
 
 function initialize(jsonData){   
     $(document).ready(function () {
+        $(':button').prop('disabled', false);
+
+        if ($(window).width() < 768) {
+            imagesToLoad = 2;
+        }
+        else if ($(window).width() >= 768 &&  $(window).width() <= 992) {
+            imagesToLoad = 4;
+        }
+        else  {
+            imagesToLoad = 3;
+        }
+        
 
         for (let i = 1; i <= imagesToLoad && i <= 82; i++) {
 
@@ -47,19 +59,19 @@ function initialize(jsonData){
             $("<div></div>").addClass("row").addClass("imageLine").attr("id","image-"+key).appendTo("#images")
 
 
-            $('<img/>').attr('src','./assets/img/laion/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/laion/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-5/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-5/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-25/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-25/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-50/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-50/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-100/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-100/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
-            $('<img/>').attr('src','./assets/img/stable-500/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-500/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
             
-            $('<img/>').attr('src','./assets/img/stable-1000/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col col-md-1").appendTo("#image-"+key));
+            $('<img/>').attr('src','./assets/img/stable-1000/'+jsonData[key]["image"]).addClass("image-elem").attr("data-lightense-background",imageZoomBack).appendTo($("<div></div>").addClass("col-12 col-md-1").appendTo("#image-"+key));
 
             $('<hr>').appendTo("#images")
             Lightense('img:not(.no-lightense),.lightense');
@@ -83,6 +95,10 @@ function initialize(jsonData){
     
     });
 }
+
+
+$(':button').prop('disabled', false);
+
 
 fetch('./assets/js/img-info.json')
     .then(data => data.json())

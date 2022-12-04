@@ -10,24 +10,18 @@ function getNewData(fileToLookAt){
         $(".right-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
         $(".left-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
         
-        $("#continue").css("opacity","0")
-        $("#continue").css("cursor","default")
-        $("#continue").prop("disabled",true)
+        $("#continue").prop("disabled",false)
+
 
         if(Math.floor(Math.random() * 101) > 50) {
-            $("#continue").css("opacity","0")
-            $("#continue").css("cursor","default")
-            $("#continue").prop("disabled",true)
-            
+
             $('#top').hide();
             $('#bottom').show();
             $('#promptSection').hide();
             correctAnswer = "bottom";
         }
         else{
-            $("#continue").css("opacity","0")
-            $("#continue").css("cursor","default")
-            $("#continue").prop("disabled",true)
+
             $('#bottom').hide();
             $('#top').show();
             $('#promptSection').hide();
@@ -85,14 +79,14 @@ function getNewData(fileToLookAt){
 
             // $(".right-opt").css("border","none")
             // $(".left-opt").css("border","none")
-
+            $("#continue").prop("disabled",false)
+            if(this.id != "navbar-toggler"){
             if (this.id == 'genOpt1') {
                 $('#promptSection').show();
                 $(':button').prop('disabled', true);
                 $(".navbar-toggler").prop('disabled',false);
                 
-                $("#continue").delay(10).animate({"opacity": "1"}, 700);
-                $("#continue").css("cursor","pointer")
+
                 $("#continue").prop("disabled",false)
 
 
@@ -108,9 +102,7 @@ function getNewData(fileToLookAt){
                 $(':button').prop('disabled', true);
                 $(".navbar-toggler").prop('disabled',false);
                 
-                $("#continue").delay(10).animate({"opacity": "1"}, 700);
-                $("#continue").css("cursor","pointer")
-                $("#continue").prop("disabled",false)
+
 
                 if(correctAnswer = "bottom"){
                     $(this).css("border","10px solid red");      
@@ -125,9 +117,6 @@ function getNewData(fileToLookAt){
                 $(':button').prop('disabled', true);
                 $(".navbar-toggler").prop('disabled',false);
                 
-                $("#continue").delay(10).animate({"opacity": "1"}, 700);
-                $("#continue").css("cursor","pointer")
-                $("#continue").prop("disabled",false)
 
                 if(correctAnswer = "top"){
                     $(this).css("border","10px solid green");      
@@ -141,9 +130,6 @@ function getNewData(fileToLookAt){
                 $(':button').prop('disabled', true);
                 $(".navbar-toggler").prop('disabled',false);
                 
-                $("#continue").delay(10).animate({"opacity": "1"}, 700);
-                $("#continue").css("cursor","pointer")
-                $("#continue").prop("disabled",false)
 
                 if(correctAnswer = "bottom"){
                     $(this).css("border","10px solid green");      
@@ -156,12 +142,9 @@ function getNewData(fileToLookAt){
                 $('#promptSection').show();
                 $(':button').prop('disabled', true);
                 $(".navbar-toggler").prop('disabled',false);
-                
-                $("#continue").css("opacity","0")
-                $("#continue").css("cursor","default")
-                $("#continue").prop("disabled",true)
-                $("#continue").css("opacity","0")
-                
+
+                $("#continue").prop("disabled",false)
+
                 $(".navbar-toggler").prop('disabled',false);
 
                 // location.reload();
@@ -170,6 +153,8 @@ function getNewData(fileToLookAt){
 
             }
             $(".navbar-toggler").prop('disabled',false);
+            $("#continue").prop("disabled",false)
+        }
 
         });
 
@@ -178,10 +163,6 @@ function getNewData(fileToLookAt){
 
 function getRandFile(files){
     console.log(Object.keys(files).length)
-    
-    $("#continue").css("opacity","0")
-    $("#continue").css("cursor","default")
-    $("#continue").prop("disabled",true)
     
 
     var randomFile = function (obj) {
@@ -206,9 +187,7 @@ function getRandFile(files){
 
 function initialize(jsonData){   
     $(document).ready(function () {
-    $("#continue").css("opacity","0")
-    $("#continue").css("cursor","default")
-    $("#continue").prop("disabled",true)
+
     allFiles=jsonData
     getRandFile(allFiles)
 });

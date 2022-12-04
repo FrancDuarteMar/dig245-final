@@ -82,14 +82,15 @@ function getNewData(fileToLookAt){
     
         // jQuery(':button').click(function () {
         jQuery(':button').one('click',function(){
-            $('#promptSection').show();
 
-            $(':button').prop('disabled', true);
-            $(".navbar-toggler").prop('disabled',false);
             // $(".right-opt").css("border","none")
             // $(".left-opt").css("border","none")
 
             if (this.id == 'genOpt1') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
                 $("#continue").delay(10).animate({"opacity": "1"}, 700);
                 $("#continue").css("cursor","pointer")
                 $("#continue").prop("disabled",false)
@@ -103,6 +104,10 @@ function getNewData(fileToLookAt){
                 }
             }
             else if (this.id == 'genOpt2') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
                 $("#continue").delay(10).animate({"opacity": "1"}, 700);
                 $("#continue").css("cursor","pointer")
                 $("#continue").prop("disabled",false)
@@ -116,6 +121,10 @@ function getNewData(fileToLookAt){
             }
 
             else if (this.id == 'realOpt1') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
                 $("#continue").delay(10).animate({"opacity": "1"}, 700);
                 $("#continue").css("cursor","pointer")
                 $("#continue").prop("disabled",false)
@@ -128,6 +137,10 @@ function getNewData(fileToLookAt){
                 }
             }
             else if (this.id == 'realOpt2') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
                 $("#continue").delay(10).animate({"opacity": "1"}, 700);
                 $("#continue").css("cursor","pointer")
                 $("#continue").prop("disabled",false)
@@ -140,10 +153,16 @@ function getNewData(fileToLookAt){
                 }
             }
             else if(this.id == "continue"){
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
                 $("#continue").css("opacity","0")
                 $("#continue").css("cursor","default")
                 $("#continue").prop("disabled",true)
                 $("#continue").css("opacity","0")
+                
+                $(".navbar-toggler").prop('disabled',false);
 
                 // location.reload();
                 getRandFile(allFiles)

@@ -25,9 +25,7 @@
     padding-bottom: 12px;
 }
 
-
-
-.prompt{
-  font-family: 'Indie Flower', cursive;
-
+body{
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Space Mono', monospace;
 }

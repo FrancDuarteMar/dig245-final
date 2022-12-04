@@ -39,6 +39,14 @@
         font-size: 0.7rem;
         font-style: italic;
     }
+    
+    #top .genBttn{
+        padding-bottom: 2%
+    }
+    #bottom .humBttn{
+        padding-bottom: 2%
+    }
+
 }
 
 

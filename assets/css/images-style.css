@@ -1,18 +1,15 @@
-@media (min-width: 768px){
-    .imageLine .col-md-1,
-    .imageLine .col-sm-1,
-    .imageLine .col-lg-1  {
+@media (max-width: 768px){
+    .imageLine, .col-md-1,
+    .imageLine, .col-sm-1,
+    .imageLine, .col-lg-1  {
       width: 100%;
       *width: 100%;
     }
 
-    .image-elem{
-        width: 100%;
-        height: 100%;
-    }
+
   }
   
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .imageLine .col-md-1,
     .imageLine .col-sm-1,
     .imageLine .col-lg-1 {
@@ -25,7 +22,19 @@
     padding-bottom: 12px;
 }
 
-.prompt{
-  font-family: 'Indie Flower', cursive;
+body{
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Space Mono', monospace;
+}
 
+
+.prompt{
+  font-weight: 200;
+  font-size: 0.9 rem;
+}
+
+.image-elem{
+  width: 100%;
+  /* height: 100%; */
+  aspect-ratio: 1/1;
 }

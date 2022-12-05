@@ -5,14 +5,23 @@ var running = true;
 
 function getNewData(fileToLookAt){
         $(':button').prop('disabled', false);
-        $(':button').css("border","3px solid black");   
+        $(".navbar-toggler").prop('disabled',false);
+        // $(':button').css("border","3px solid black");   
+        $(".right-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
+        $(".left-opt").css("border","10px solid rgba(240, 229, 229, 0.874)")
+        
+        $("#continue").prop("disabled",false)
+
+
         if(Math.floor(Math.random() * 101) > 50) {
+
             $('#top').hide();
             $('#bottom').show();
             $('#promptSection').hide();
             correctAnswer = "bottom";
         }
         else{
+
             $('#bottom').hide();
             $('#top').show();
             $('#promptSection').hide();
@@ -67,11 +76,20 @@ function getNewData(fileToLookAt){
     
         // jQuery(':button').click(function () {
         jQuery(':button').one('click',function(){
-            $('#promptSection').show();
 
-            $(':button').prop('disabled', true);
+            // $(".right-opt").css("border","none")
+            // $(".left-opt").css("border","none")
+            $("#continue").prop("disabled",false)
+            if(this.id != "navbar-toggler"){
             if (this.id == 'genOpt1') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
                 
+
+                $("#continue").prop("disabled",false)
+
+
                 if(correctAnswer = "top"){
                     $(this).css("border","10px solid red");      
                 }
@@ -80,6 +98,12 @@ function getNewData(fileToLookAt){
                 }
             }
             else if (this.id == 'genOpt2') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
+
+
                 if(correctAnswer = "bottom"){
                     $(this).css("border","10px solid red");      
                 }
@@ -89,6 +113,11 @@ function getNewData(fileToLookAt){
             }
 
             else if (this.id == 'realOpt1') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
+
                 if(correctAnswer = "top"){
                     $(this).css("border","10px solid green");      
                 }
@@ -97,6 +126,11 @@ function getNewData(fileToLookAt){
                 }
             }
             else if (this.id == 'realOpt2') {
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+                
+
                 if(correctAnswer = "bottom"){
                     $(this).css("border","10px solid green");      
                 }
@@ -105,15 +139,22 @@ function getNewData(fileToLookAt){
                 }
             }
             else if(this.id == "continue"){
+                $('#promptSection').show();
+                $(':button').prop('disabled', true);
+                $(".navbar-toggler").prop('disabled',false);
+
+                $("#continue").prop("disabled",false)
+
+                $(".navbar-toggler").prop('disabled',false);
+
                 // location.reload();
                 getRandFile(allFiles)
 
 
             }
-
-            $('#continue').prop('disabled', false);
-
-            
+            $(".navbar-toggler").prop('disabled',false);
+            $("#continue").prop("disabled",false)
+        }
 
         });
 
@@ -123,6 +164,7 @@ function getNewData(fileToLookAt){
 function getRandFile(files){
     console.log(Object.keys(files).length)
     
+
     var randomFile = function (obj) {
         var keys = Object.keys(obj);
         var pos = keys[keys.length * Math.random() << 0]

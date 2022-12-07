@@ -7,6 +7,12 @@
     }
 
 
+  .prompt-text{
+    font-size: 1.1rem;
+    
+  }
+
+
   }
   
   @media (min-width: 768px) {
@@ -16,7 +22,19 @@
       width: 14.285714285714285714285714285714%;
       *width: 14.285714285714285714285714285714%;
     }
+    .prompt-text{
+      font-size: 0.65rem;
+    }
   }
+
+
+  @media (min-width: 992px) {
+
+    .prompt-text{
+      font-size: 1.05rem;
+    }
+  }
+
 
   .image-elem{
     padding-bottom: 12px;
@@ -28,13 +46,25 @@ body{
 }
 
 
-.prompt{
+/* .prompt{
   font-weight: 200;
   font-size: 0.9 rem;
-}
+} */
 
 .image-elem{
   width: 100%;
   /* height: 100%; */
   aspect-ratio: 1/1;
+}
+
+
+.prompt-text{
+  font-weight: 200;
+}
+
+
+.lightense-wrap > .image-elem{
+  width: 95%;
+  height: 90%;
+  aspect-ratio:unset;
 }

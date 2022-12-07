@@ -10,7 +10,7 @@ function loadMore(jsonData){
         key = String(i)
 
             $("<div></div>").addClass("col prompt-row col-xl-8 offset-xl-2").attr("id","prompt-"+key).appendTo("#images")
-            $("#prompt-"+key).html(`<h6 class=" prompt"> Prompt: `+jsonData[key]["prompt"]+"</h6>")
+            $("#prompt-"+key).html(`<h6 class="prompt-text"> Prompt: `+jsonData[key]["prompt"]+"</h6>")
             
             $("<div></div>").addClass("row").addClass("imageLine").attr("id","image-"+key).appendTo("#images")
 
@@ -54,7 +54,7 @@ function initialize(jsonData){
 
             key = String(i)
             $("<div></div>").addClass("col prompt-row col-xl-8 offset-xl-2").attr("id","prompt-"+key).appendTo("#images")
-            $("#prompt-"+key).html(`<h6 class=" prompt"> Prompt: `+jsonData[key]["prompt"]+"</h6>")
+            $("#prompt-"+key).html(`<h6 class="prompt-text"> Prompt: `+jsonData[key]["prompt"]+"</h6>")
 
             $("<div></div>").addClass("row").addClass("imageLine").attr("id","image-"+key).appendTo("#images")
 

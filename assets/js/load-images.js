@@ -85,7 +85,7 @@ function initialize(jsonData){
             Lightense('img:not(.no-lightense),.lightense');
 
             if(currPageNum + imagesToLoad >=82){
-                $("#load-more-btn").html("Reached the end.")
+                $("#load").html("Reached the End")
                 $("#load-more-btn").prop('disabled', true);
             } 
             console.log("currently on page load num: "+     currPageNum)

@@ -74,3 +74,14 @@ body{
   max-height: 90%;
   aspect-ratio:unset;
 }
+
+#load{
+  text-decoration: underline;
+}
+
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+
+  border-color: none !important;
+  border: none !important;
+
+}

@@ -27,11 +27,26 @@ iframe{
     
     iframe#google-slides {
         height: 500px;
-        width: 850px 
+        width: 750px 
     }
 
     iframe#figma {
         height: 500px;
-        width: 850px 
+        width: 750px; 
     }
+    .show-more-btn{
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    .detailed-text{
+        font-weight: 200;
+        font-size: 1rem;
+    }
+
+}
+
+.download-txt{
+    font-weight: 500;
+    font-size: 1000;
 }

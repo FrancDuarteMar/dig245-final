@@ -79,7 +79,38 @@
 
 		<div class="row" id="row-about" >
 			<div class="class-col-12 justify-content-left align-content-left">
-				this is about this data 
+				<div class="row">
+					<div class="col-12">
+						<p class="detailed-text" id="about-text">
+						In order to create the images used in this project, I first began by selecting random images from the <a href="https://laion.ai/blog/laion-aesthetics/"  target="_blank">LAION-AESTHETICS Database</a> that had an aesthetics score of 6 or higher. Next, these images were processed through a <a href="https://github.com/pharmapsychotic/clip-interrogator"  target="_blank">Clip Interrogator</a> using the ViT-H model in order to create the prompts presented for each image. Finally, the prompts were passed onto the <a href="https://github.com/Stability-AI/stablediffusion"  target="_blank"> Stable Diffusion 2.1 Model</a> in order to generate their respective images. Each prompt was passed through 5, 25, 50, 100, 500 and 1000 inference steps with a guidance scale of 7.5 to generate images with self-assigned difficulty scores of 1, 2, 3, 4, 5, 6 respectively. The work was done on a 5950x CPU and 3090 GPU with 128 GB of RAM available. 
+
+						<br>
+						<br>
+						The LAION-AESTHETICS images were selected because they're apart of the database used to train Stable Diffusion so it made sense to provide prompts similar to what Stable Diffusion had seen before in order to create the most impressive images. From there, clip-interrogator was chosen as the prompt generation model in order to create descriptive prompts tailored to the image generation models available. Lastly, Stable Diffusion was chosen over DALL·E 2 because of its realistic look tailored to some of the non-painting images chosen. After comparing many of the images generated, DALL·E 2 excelled at creating paintings while Stable Diffusion was subjectively better at generating photographs. 
+					</p>
+					</div>
+				</div>
+
+				<div class="row row-download">
+					<div class="col-md-4 col-xs-12 ">
+						Download Data: 
+					</div>
+
+					<div class="col-md-4 col-xs-6">
+						<form method="get" action="./assets/js/img-info.json">
+							<button class="underline txt "><i class="fa fa-download"></i> ⭳ Download prompts as JSON </button>
+						 </form>
+					</div>
+
+					<div class="col-md-4 col-xs-6">
+						<form method="get" action="./assets/img/img.rar">
+							<button class="btn underline "><i class="fa fa-download"></i> <span class="download-txt">
+								⭳Download All data as RAR
+							</span> </button>
+						 </form>
+					</div>
+				</div>
+
 			</div>
 		</div>
 

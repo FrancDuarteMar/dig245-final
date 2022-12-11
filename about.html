@@ -13,25 +13,22 @@
 
 
 	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link rel="stylesheet" href="./assets/css/about.css">
+
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
 	</script>
 
-	<script>
-		$(function () {
-			$("#header").load("./assets/html/header.html");
-		});
-	</script>
 
 	<title>dig245-final</title>
 </head>
 
 <body>
 	<div class="container">
-		<div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+		<div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
 			<nav class="bs navbar navbar-expand-md navbar-light">
-				<a class="navbar-brand" href="./index.html">Art? or NOT!</a>
+				<a class="navbar-brand bs" href="./index.html">Art? or NOT!</a>
 				<button class="navbar-toggler col-xs-0 offset col-1 bs"
 					type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent"
@@ -39,32 +36,122 @@
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="bs collapse navbar-collapse  offset-lg-6 offset-md-2"
+				<div class="bs collapse navbar-collapse col-lg-2 col-md-1 offset-lg-5 offset-md-4  justify-content-end"
 					id="navbarSupportedContent">
-					<ul class="navbar-nav ">
-						<li class="nav-item active">
-							<a class="nav-link" href="./index.html">Home</a>
-						</li>
+					<ul class="navbar-nav justify-content-end">
 						<li class="nav-item">
+							<a class="nav-link " href="./index.html">Home</a>
+						</li>
+						<li class="nav-item ">
 							<a class="nav-link" href="./data.html">Data</a>
 						</li>
-						<!-- <li class="nav-item">
-							<a class="nav-link"
-								href="./information.html">Information</a>
-						</li> -->
-						<li class="nav-item">
-							<a class="nav-link" href="./about.html">About</a>
+						<li class="nav-item active">
+							<a class="nav-link active" href="./about.html">About</a>
 						</li>
 					</ul>
 
+					
 				</div>
 			</nav>
 		</div>
 	</div>
 
 	<div class="container" id="main-content">
+		<div class="row">
+			<div class="col-12">
+				<hr>
+			</div>
+		</div>
+		<!-- About the data -->
+		<div class="row">
+			<div class="col-12 justify-content-left">
+				<button class = "show-more-btn " id = "about-data-btn" value="OFF">
+					<span id="about-icon">
+						⮟
+					</span>
+					<span class = "underline">
+						About the data
+					</span>
+				 </button>
+				<!-- <hr class="light"> -->
+			</div>
+		</div>
+
+		<div class="row" id="row-about" >
+			<div class="class-col-12 justify-content-left align-content-left">
+				this is about this data 
+			</div>
+		</div>
+
+		<!-- AI Art -->
+		<div class="row">
+			<div class="col-12 justify-content-left">
+				<button class = "show-more-btn" id = "ai-art-btn" value="OFF">
+					<span id="ai-icon">
+						⮟
+					</span>
+					<span class = "underline">
+						AI Art
+					</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="row" id="row-ai" >
+			<div class="class-col-12 justify-content-left align-content-left">
+				
+				<div class="row">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NiJeB2NJy1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<br>
+				<div class="row">
+					<div class="col-12 col-lg-4 offset-lg-4">
+						<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/FashXK/timelines/1601773020627935232?ref_src=twsrc%5Etfw">AI ART - </a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- In-Class Art -->
+		<div class="row">
+			<div class="col-12 justify-content-left">
+				<button class = "show-more-btn" id = "class-btn" value="OFF">
+					<span id="class-icon">
+						⮟
+					</span>
+					<span class = "underline">
+						Class Specific Information
+					</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="row" id="row-class" >
+			<div class="class-col-12 justify-content-left align-content-left">
+				<div class="row">
+					<div class="col-12 col-lg-6 offset-lg-2">
+						<iframe id="google-slides" src="https://docs.google.com/presentation/d/e/2PACX-1vT7wtGjZaFsmGfVsRY34jJ05DRwUhSVT10_D5HBCXK9snmntuewADqLosoxx9eAmBgI1egEmUTyVGwm/embed?start=false&loop=true&delayms=5000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-lg-6 offset-lg-2">
+						<iframe id="figma" style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0W6SBx5roe8LphweALmLVZ%2FDig-245-Final%3Fnode-id%3D1%253A62%26t%3DtBdTguB7VQ5eYsAt-1" allowfullscreen></iframe>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		
+		
 	</div>
 
 
@@ -85,7 +172,7 @@
 	</script>
 
 	<!-- Project JS -->
-	<script src="./assets/js/load-images.js"></script>
+	<script src="./assets/js/about.js"></script>
 
 
 

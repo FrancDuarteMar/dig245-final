@@ -46,10 +46,6 @@ body{
 }
 
 
-/* .prompt{
-  font-weight: 200;
-  font-size: 0.9 rem;
-} */
 
 .image-elem{
   width: 100%;
@@ -80,8 +76,6 @@ body{
 }
 
 .btn.disabled, .btn:disabled, fieldset:disabled .btn {
-
-  border-color: none !important;
   border: none !important;
 
 }

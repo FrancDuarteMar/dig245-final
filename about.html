@@ -46,11 +46,12 @@
 							<a class="nav-link" href="./data.html">Data</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link active" href="./about.html">About</a>
+							<a class="nav-link active"
+								href="./about.html">About</a>
 						</li>
 					</ul>
 
-					
+
 				</div>
 			</nav>
 		</div>
@@ -65,49 +66,89 @@
 		<!-- About the data -->
 		<div class="row">
 			<div class="col-12 justify-content-left">
-				<button class = "show-more-btn " id = "about-data-btn" value="OFF">
+				<button class="show-more-btn " id="about-data-btn" value="OFF">
 					<span id="about-icon">
 						⮟
 					</span>
-					<span class = "underline">
+					<span class="underline">
 						About the data
 					</span>
-				 </button>
+				</button>
 				<!-- <hr class="light"> -->
 			</div>
 		</div>
 
-		<div class="row" id="row-about" >
-			<div class="class-col-12 justify-content-left align-content-left">
+		<div class="row" id="row-about">
+			<div class="col-12 justify-content-left align-content-left">
 				<div class="row">
 					<div class="col-12">
 						<p class="detailed-text" id="about-text">
-						In order to create the images used in this project, I first began by selecting random images from the <a href="https://laion.ai/blog/laion-aesthetics/"  target="_blank">LAION-AESTHETICS Database</a> that had an aesthetics score of 6 or higher. Next, these images were processed through a <a href="https://github.com/pharmapsychotic/clip-interrogator"  target="_blank">Clip Interrogator</a> using the ViT-H model in order to create the prompts presented for each image. Finally, the prompts were passed onto the <a href="https://github.com/Stability-AI/stablediffusion"  target="_blank"> Stable Diffusion 2.1 Model</a> in order to generate their respective images. Each prompt was passed through 5, 25, 50, 100, 500 and 1000 inference steps with a guidance scale of 7.5 to generate images with self-assigned difficulty scores of 1, 2, 3, 4, 5, 6 respectively. The work was done on a 5950x CPU and 3090 GPU with 128 GB of RAM available. 
+							In order to create the images used in this project,
+							I first began by selecting random images from the <a
+								href="https://laion.ai/blog/laion-aesthetics/"
+								target="_blank">LAION-AESTHETICS Database</a>
+							that had an aesthetics score of 6 or higher. Next,
+							these images were processed through a <a
+								href="https://github.com/pharmapsychotic/clip-interrogator"
+								target="_blank">Clip Interrogator</a> using the
+							ViT-H model in order to create the prompts presented
+							for each image. Finally, the prompts were passed
+							onto the <a
+								href="https://github.com/Stability-AI/stablediffusion"
+								target="_blank"> Stable Diffusion 2.1 Model</a>
+							in order to generate their respective images. Each
+							prompt was passed through 5, 25, 50, 100, 500 and
+							1000 inference steps with a guidance scale of 7.5 to
+							generate images with self-assigned difficulty scores
+							of 1, 2, 3, 4, 5, 6 respectively. The work was done
+							on a 5950x CPU and 3090 GPU with 128 GB of RAM
+							available.
 
-						<br>
-						<br>
-						The LAION-AESTHETICS images were selected because they're apart of the database used to train Stable Diffusion so it made sense to provide prompts similar to what Stable Diffusion had seen before in order to create the most impressive images. From there, clip-interrogator was chosen as the prompt generation model in order to create descriptive prompts tailored to the image generation models available. Lastly, Stable Diffusion was chosen over DALL·E 2 because of its realistic look tailored to some of the non-painting images chosen. After comparing many of the images generated, DALL·E 2 excelled at creating paintings while Stable Diffusion was subjectively better at generating photographs. 
-					</p>
+							<br>
+							<br>
+							The LAION-AESTHETICS images were selected because
+							they're apart of the database used to train Stable
+							Diffusion so it made sense to provide prompts
+							similar to what Stable Diffusion had seen before in
+							order to create the most impressive images. From
+							there, clip-interrogator was chosen as the prompt
+							generation model in order to create descriptive
+							prompts tailored to the image generation models
+							available. Lastly, Stable Diffusion was chosen over
+							DALL·E 2 because of its realistic look tailored to
+							some of the non-painting images chosen. After
+							comparing many of the images generated, DALL·E 2
+							excelled at creating paintings while Stable
+							Diffusion was subjectively better at generating
+							photographs.
+						</p>
 					</div>
 				</div>
 
 				<div class="row row-download">
-					<div class="col-md-4 col-xs-12 ">
-						Download Data: 
+					<div class="col-md-4 col-xs-1 bs">
+						<span class="download-txt"> Download Data: </span>
 					</div>
-
-					<div class="col-md-4 col-xs-6">
+					<div class="col-md-4 col-xs-1 bs">
 						<form method="get" action="./assets/js/img-info.json">
-							<button class="underline txt "><i class="fa fa-download"></i> ⭳ Download prompts as JSON </button>
-						 </form>
+							<button class="btn underline "><i
+									class="fa fa-download justify-content-center"></i> <span
+									class="download-txt justify-content-center">
+									⭳Download All prompts as JSON
+								</span> </button>
+						</form>
 					</div>
 
-					<div class="col-md-4 col-xs-6">
+			
+
+					<div class="col-md-4 col-xs-1 bs">
 						<form method="get" action="./assets/img/img.rar">
-							<button class="btn underline "><i class="fa fa-download"></i> <span class="download-txt">
-								⭳Download All data as RAR
-							</span> </button>
-						 </form>
+							<button class="btn underline "><i
+									class="fa fa-download justify-content-center"></i> <span
+									class="download-txt justify-content-center">
+									⭳Download All data as RAR
+								</span> </button>
+						</form>
 					</div>
 				</div>
 
@@ -117,28 +158,37 @@
 		<!-- AI Art -->
 		<div class="row">
 			<div class="col-12 justify-content-left">
-				<button class = "show-more-btn" id = "ai-art-btn" value="OFF">
+				<button class="show-more-btn" id="ai-art-btn" value="OFF">
 					<span id="ai-icon">
 						⮟
 					</span>
-					<span class = "underline">
+					<span class="underline">
 						AI Art
 					</span>
 				</button>
 			</div>
 		</div>
 
-		<div class="row" id="row-ai" >
+		<div class="row" id="row-ai">
 			<div class="class-col-12 justify-content-left align-content-left">
-				
+
 				<div class="row">
-					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NiJeB2NJy1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315"
+						src="https://www.youtube-nocookie.com/embed/NiJeB2NJy1A"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
 				</div>
 
 				<br>
 				<div class="row">
 					<div class="col-12 col-lg-4 offset-lg-4">
-						<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/FashXK/timelines/1601773020627935232?ref_src=twsrc%5Etfw">AI ART - </a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<a class="twitter-timeline" data-dnt="true"
+							href="https://twitter.com/FashXK/timelines/1601773020627935232?ref_src=twsrc%5Etfw">AI
+							ART - </a>
+						<script async
+							src="https://platform.twitter.com/widgets.js"
+							charset="utf-8"></script>
 					</div>
 
 				</div>
@@ -148,22 +198,26 @@
 		<!-- In-Class Art -->
 		<div class="row">
 			<div class="col-12 justify-content-left">
-				<button class = "show-more-btn" id = "class-btn" value="OFF">
+				<button class="show-more-btn" id="class-btn" value="OFF">
 					<span id="class-icon">
 						⮟
 					</span>
-					<span class = "underline">
+					<span class="underline">
 						Class Specific Information
 					</span>
 				</button>
 			</div>
 		</div>
 
-		<div class="row" id="row-class" >
+		<div class="row" id="row-class">
 			<div class="class-col-12 justify-content-left align-content-left">
 				<div class="row">
 					<div class="col-12 col-lg-6 offset-lg-2">
-						<iframe id="google-slides" src="https://docs.google.com/presentation/d/e/2PACX-1vT7wtGjZaFsmGfVsRY34jJ05DRwUhSVT10_D5HBCXK9snmntuewADqLosoxx9eAmBgI1egEmUTyVGwm/embed?start=false&loop=true&delayms=5000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+						<iframe id="google-slides"
+							src="https://docs.google.com/presentation/d/e/2PACX-1vT7wtGjZaFsmGfVsRY34jJ05DRwUhSVT10_D5HBCXK9snmntuewADqLosoxx9eAmBgI1egEmUTyVGwm/embed?start=false&loop=true&delayms=5000"
+							frameborder="0" allowfullscreen="true"
+							mozallowfullscreen="true"
+							webkitallowfullscreen="true"></iframe>
 
 
 					</div>
@@ -172,7 +226,10 @@
 
 				<div class="row">
 					<div class="col-12 col-lg-6 offset-lg-2">
-						<iframe id="figma" style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0W6SBx5roe8LphweALmLVZ%2FDig-245-Final%3Fnode-id%3D1%253A62%26t%3DtBdTguB7VQ5eYsAt-1" allowfullscreen></iframe>
+						<iframe id="figma"
+							style="border: 1px solid rgba(0, 0, 0, 0.1);"
+							src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0W6SBx5roe8LphweALmLVZ%2FDig-245-Final%3Fnode-id%3D1%253A62%26t%3DtBdTguB7VQ5eYsAt-1"
+							allowfullscreen></iframe>
 
 
 					</div>
@@ -181,8 +238,8 @@
 			</div>
 		</div>
 
-		
-		
+
+
 	</div>
 
 

@@ -20,6 +20,11 @@ iframe{
         height: 500px;
         width: 100%; 
     }
+
+    .download-txt{
+        font-size: .8rem;
+        font-weight: 400;
+    }
 }
 
 @media (min-width: 768px) {
@@ -44,9 +49,13 @@ iframe{
         font-size: 1rem;
     }
 
+    .download-txt{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+
 }
 
-.download-txt{
-    font-weight: 500;
-    font-size: 1000;
-}
+
+
